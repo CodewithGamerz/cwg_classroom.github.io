@@ -674,3 +674,235 @@ body.light-theme .secondary {
   border: none;
   cursor: pointer;
 }
+/* =========================
+   COMMUNITY PAGE
+========================= */
+.community-page {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.community-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #00f2c3;
+  text-shadow: 0 0 10px rgba(0,242,195,0.5);
+}
+
+.community-header p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.community-header p a {
+  color: #ff7a18;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.community-header p a:hover {
+  color: #ffb347;
+  text-shadow: 0 0 15px rgba(255,122,24,0.6);
+}
+
+.community-note {
+  display: inline-block;
+  background: rgba(0,242,195,0.05);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,242,195,0.2);
+  color: #00f2c3;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.community-note span {
+  font-weight: bold;
+  margin-right: 8px;
+}
+/* =========================
+   MOBILE RESPONSIVENESS FIXES
+========================= */
+
+/* Small devices (phones, <600px) */
+@media (max-width: 600px) {
+
+  /* HERO SECTION */
+  .hero {
+    flex-direction: column;
+    padding: 30px 15px;
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .primary, .secondary {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+  /* HERO VIDEO CARD */
+  .hero-video {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-video .video-card {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    padding: 16px;
+  }
+
+  .video-card .play {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* NAV LINKS */
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  /* CARDS & HEX GRID */
+  .cards, .hex-grid, .videos-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card, .hex {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .hex {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  /* FOOTER */
+  .footer p {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* COMMUNITY PAGE */
+  .community-page {
+    padding: 20px;
+  }
+
+  .comment-box {
+    width: 100%;
+  }
+
+  #comment-input {
+    min-height: 80px;
+  }
+}
+
+/* Medium devices (tablets, 600px–900px) */
+@media (max-width: 900px) {
+
+  .hero-text h1 {
+    font-size: 34px;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .primary, .secondary {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+
+  .hero-video {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .hero-video .video-card {
+    width: 260px;
+    max-width: 80%;
+  }
+
+  .cards, .hex-grid, .videos-grid {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card, .hex {
+    max-width: 240px;
+  }
+}
+/* =========================
+   MOBILE NAVBAR ADJUSTMENT
+========================= */
+@media (max-width: 768px) {
+    /* Make the navbar content stack for mobile */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align everything to the left initially */
+        padding: 10px 15px;
+    }
+
+    /* Shift the logo a little right */
+    .navbar .logo {
+        margin-left: 10px; /* adjust this value as needed */
+        display: flex;
+        align-items: center;
+    }
+
+    /* Put music controls next to the logo */
+    .navbar .music-controls {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Tabs below logo + music controls */
+    .navbar .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* Distribute tabs evenly */
+        margin-top: 10px; /* space from logo row */
+        flex-wrap: wrap; /* wrap if needed */
+    }
+
+    /* Reduce padding/margins for mobile tabs if needed */
+    .navbar .nav-links a {
+        margin: 5px 8px;
+    }
+}
