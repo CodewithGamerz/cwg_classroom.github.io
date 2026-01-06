@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CraftLab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="img/logo2.png" alt="CraftLab Logo">
+    <span>CRAFTLAB STUDIO</span>
+  </div>
+
+  <nav>
+    <a href="#" onclick="showTab('home')">Home</a>
+    <a href="#" onclick="showTab('video')">Videos</a>
+    <a href="#" onclick="showTab('blueprints')">Blueprints</a>
+    <a href="#" onclick="showTab('community')">Community</a>
+    <a href="#" onclick="showTab('about')">About</a>
+
+    <!-- Music Button -->
+    <button id="music-toggle" class="nav-btn">🔊</button>
+
+    <!-- Volume Control -->
+    <div class="volume-control">
+      <button class="vol-btn" id="vol-down">−</button>
+      <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.3"/>
+      <button class="vol-btn" id="vol-up">+</button>
+      <span id="vol-percent">30%</span>
+    </div>
+  </nav>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="sound/music.mp3" type="audio/mpeg">
+  </audio>
+</header>
+
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Crafting the Extraordinary,<br>One Blueprint at a Time</h1>
+      <div class="buttons">
+        <button class="primary">Watch Latest Tutorial</button>
+        <button class="secondary">Browse Blueprints</button>
+      </div>
+    </div>
+
+    <div class="hero-video">
+      <div class="video-card">
+        <span>WATCH DIY</span>
+        <h3>Geometric Lamp</h3>
+        <div class="play">▶</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tutorials">
+    <h2>LATEST <span>TUTORIALS</span></h2>
+    <div class="cards">
+      <div class="card">▶ Modular Desk Organizer</div>
+      <div class="card">▶ Custom Resin Lamp</div>
+      <div class="card">▶ Wooden LED Sign</div>
+    </div>
+  </section>
+
+  <section class="blueprints">
+    <h2>BLUEPRINT LIBRARY</h2>
+    <div class="hex-grid">
+      <div class="hex">Paper Crafts</div>
+      <div class="hex">3D Prints</div>
+      <div class="hex">Woodworking</div>
+      <div class="hex">Digital Builds</div>
+    </div>
+  </section>
+</section>
+
+<!-- ABOUT PAGE -->
+<section id="about" class="page">
+  <section class="hero about-hero">
+    <div class="hero-text">
+      <h1>About CraftLab Studio</h1>
+      <p class="about-subtitle">
+        Where creativity meets precision, and ideas turn into real-world builds.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-content">
+    <div class="about-block">
+      <h2>Who We Are</h2>
+      <p>
+        CraftLab Studio is a creative maker space built for innovators, DIY enthusiasts,
+        and modern creators who believe that great ideas deserve great execution.
+        We focus on blending design, engineering, and craftsmanship into practical,
+        build-ready projects.
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>What We Create</h2>
+      <p>
+        From step-by-step video tutorials to detailed blueprints and experimental builds,
+        CraftLab Studio delivers high-quality content that empowers you to create with confidence.
+        Every project is designed with clarity and precision.
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Why CraftLab</h2>
+      <p>
+        We don’t believe in overcomplicated instructions or vague designs.
+        CraftLab Studio is about clean workflows, smart techniques, and modern aesthetics —
+        helping creators focus on what truly matters: building something extraordinary.
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Our Vision</h2>
+      <p>
+        Our vision is to become a trusted digital workshop for creators worldwide —
+        a place where ideas evolve into blueprints, and blueprints evolve into reality.
+        Whether you are a beginner or an advanced maker, CraftLab Studio grows with you.
+      </p>
+    </div>
+  </section>
+</section>
+
+<!-- VIDEO PAGE -->
+<section id="video" class="page">
+  <section class="videos-page" id="videos-page" style="display:none;">
+    <div class="videos-header">
+      <h1>VIDEO <span>LIBRARY</span></h1>
+      <p>Step-by-step tutorials crafted for creators</p>
+    </div>
+
+    <div class="videos-grid">
+      <div class="video-card-large">
+        <div class="video-thumb">
+          <span class="tag">LATEST</span>
+          <div class="play-btn">▶</div>
+        </div>
+        <h3>Geometric Lamp Build</h3>
+        <p>Modern lamp made using simple materials</p>
+      </div>
+      <div class="video-card-large">
+        <div class="video-thumb"><div class="play-btn">▶</div></div>
+        <h3>Custom Resin Desk Lamp</h3>
+        <p>Resin casting with LED lighting</p>
+      </div>
+      <div class="video-card-large">
+        <div class="video-thumb"><div class="play-btn">▶</div></div>
+        <h3>Wooden LED Wall Sign</h3>
+        <p>Minimal woodworking project</p>
+      </div>
+      <div class="video-card-large">
+        <div class="video-thumb"><div class="play-btn">▶</div></div>
+        <h3>Modular Desk Organizer</h3>
+        <p>Clean & functional desk setup</p>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- BLUEPRINTS PAGE -->
+<section id="blueprints" class="page">
+  <section class="blueprints-page">
+    <div class="blueprints-header">
+      <h1>BLUEPRINT <span>LIBRARY</span></h1>
+      <p>Step-by-step plans for all kinds of projects</p>
+    </div>
+
+    <div class="blueprints-grid">
+      <!-- Blueprint Card 1 -->
+      <div class="blueprint-card">
+        <h3>Paper Crafts</h3>
+        <p>Creative paper projects for beginners & pros</p>
+        <a href="templates/paper-crafts.pdf" download class="download-btn">Download Template</a>
+      </div>
+
+      <!-- Blueprint Card 2 -->
+      <div class="blueprint-card">
+        <h3>3D Prints</h3>
+        <p>Models ready to print and assemble</p>
+        <a href="templates/3d-prints.pdf" download class="download-btn">Download Template</a>
+      </div>
+
+      <!-- Blueprint Card 3 -->
+      <div class="blueprint-card">
+        <h3>Woodworking</h3>
+        <p>Detailed plans for furniture & decor</p>
+        <a href="templates/woodworking.pdf" download class="download-btn">Download Template</a>
+      </div>
+
+      <!-- Blueprint Card 4 -->
+      <div class="blueprint-card">
+        <h3>Digital Builds</h3>
+        <p>CAD & virtual project designs</p>
+        <a href="templates/digital-builds.pdf" download class="download-btn">Download Template</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- COMMUNITY PAGE -->
+<section id="community" class="page">
+  <section class="community-page">
+    <div class="community-header">
+      <h1>Give Your Suggestions to Improve This Website</h1>
+      <p>We value your feedback. Share your ideas below!</p>
+    </div>
+
+    <div class="comment-box">
+      <textarea id="comment-input" placeholder="Write your suggestion here..." readonly></textarea>
+      <div class="comment-buttons">
+        <button id="comment-edit" class="primary-btn">✎ Edit</button>
+        <button id="comment-send" class="primary-btn">Send</button>
+        <button id="comment-cancel" class="secondary-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="comments-list" id="comments-list">
+      <!-- Suggestions will appear here -->
+    </div>
+  </section>
+</section>
+
+
+<footer class="footer">
+  <p>© 2026 CraftLab — Built for Creators <span class="footer-separator">•</span> Music: "Chill Vibe Beat" – Pixabay</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
